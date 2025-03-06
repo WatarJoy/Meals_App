@@ -1,0 +1,70 @@
+/* Загальний контейнер для сторінки обраних рецептів */
+.choosen-recipes-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок сторінки */
+.choosen-recipes-page h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Сітка для відображення обраних рецептів */
+.choosen-recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Карточка обраного рецепта */
+.choosen-recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.choosen-recipe-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.choosen-recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+.choosen-recipe-card-content {
+  padding: 15px;
+}
+
+.choosen-recipe-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.choosen-recipe-card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Кнопка для видалення рецепта з обраних */
+.remove-recipe-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ff4d4d;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.remove-recipe-button:hover {
+  background-color: #e60000;
+}

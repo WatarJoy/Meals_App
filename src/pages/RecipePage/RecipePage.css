@@ -1,0 +1,185 @@
+/* RecipePage.css */
+
+/* Основний контейнер сторінки рецепта */
+.recipe-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Стилі для компонента RecipeDetail */
+.recipe-detail {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Стилі для заголовка рецепта */
+.recipe-detail h1,
+.recipe-detail h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.recipe-detail h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+/* Стилі для зображення рецепта */
+.recipe-detail img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin: 0 auto 20px;
+  display: block;
+  justify-self: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для секцій інформації */
+.recipe-detail section {
+  margin-bottom: 30px;
+}
+
+/* Стилі для категорії та країни */
+.recipe-detail .category,
+.recipe-detail .area {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Стилі для списку інгредієнтів */
+.recipe-detail ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe-detail li {
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid #3498db;
+}
+
+/* Стилі для інструкцій */
+.recipe-detail p {
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* Стилі для відео */
+.recipe-detail iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Стилі для посилань */
+.recipe-detail a {
+  color: #3498db;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.recipe-detail a:hover {
+  text-decoration: underline;
+}
+
+/* Стилі для кнопки повернення */
+.back-button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .recipe-detail .recipe-header {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .recipe-detail img {
+    margin: 0 20px 0 0;
+    max-width: 45%;
+  }
+
+  .recipe-detail .recipe-info {
+    flex: 1;
+  }
+}
+
+/* Стилі для повідомлень про завантаження та помилки */
+.recipe-page p {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+/* Стилі для тегів, якщо вони є */
+.recipe-detail .tags {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe-detail .tag {
+  display: inline-block;
+  background-color: #f1c40f;
+  color: #333;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+/* Стилі для розділів рецепту */
+.ingredients-section,
+.instructions-section,
+.video-section {
+  margin-top: 30px;
+}
+
+.ingredients-section h2,
+.instructions-section h2,
+.video-section h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
