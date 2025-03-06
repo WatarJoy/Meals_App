@@ -1,4 +1,5 @@
-# Meal Recipes App
+# Meal Recipes App 
+[Demo](https://github.com/WatarJoy/Meals_App)
 
 A recipe application built with React and TypeScript that uses [TheMealDB API](https://www.themealdb.com/api.php?ref=apilist.fun) to fetch and display meal recipes. This project demonstrates various features such as recipe listing, detailed recipe view, category filtering, pagination, debounced search, and a selection (or “shopping cart”) mechanism to combine ingredients from multiple recipes.
 
