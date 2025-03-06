@@ -20,19 +20,15 @@ const Pagination: React.FC<PaginationProps> = ({
     const pages: number[] = [];
 
     if (totalPages <= maxPagesToShow) {
-      // Show all pages if there are fewer pages than the maximum to show
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
-      // Always show first page
       pages.push(1);
 
-      // Calculate the range of pages to show around the current page
       let rangeStart = Math.max(2, currentPage - 2);
       let rangeEnd = Math.min(totalPages - 1, currentPage + 2);
 
-      // Adjust if the range is too small on either side
       if (rangeStart <= 2) {
         rangeEnd = Math.min(totalPages - 1, 1 + maxPagesToShow - 2);
       }
@@ -41,22 +37,18 @@ const Pagination: React.FC<PaginationProps> = ({
         rangeStart = Math.max(2, totalPages - maxPagesToShow + 2);
       }
 
-      // Add ellipsis if there's a gap at the beginning
       if (rangeStart > 2) {
-        pages.push(-1); // ellipsis
+        pages.push(-1);
       }
 
-      // Add the range of pages
       for (let i = rangeStart; i <= rangeEnd; i++) {
         pages.push(i);
       }
 
-      // Add ellipsis if there's a gap at the end
       if (rangeEnd < totalPages - 1) {
-        pages.push(-1); // ellipsis
+        pages.push(-1);
       }
 
-      // Always show last page
       pages.push(totalPages);
     }
 
@@ -64,7 +56,7 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   if (totalPages <= 1) {
-    return null; // Don't show pagination if there's only one page
+    return null;
   }
 
   const pages = getPageNumbers();

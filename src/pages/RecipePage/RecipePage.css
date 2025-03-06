@@ -1,6 +1,3 @@
-/* RecipePage.css */
-
-/* Основний контейнер сторінки рецепта */
 .recipe-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -9,7 +6,6 @@
   min-height: 100vh;
 }
 
-/* Стилі для компонента RecipeDetail */
 .recipe-detail {
   background-color: #fff;
   border-radius: 8px;
@@ -18,7 +14,6 @@
   overflow: hidden;
 }
 
-/* Стилі для заголовка рецепта */
 .recipe-detail h1,
 .recipe-detail h2 {
   color: #333;
@@ -31,7 +26,6 @@
   margin-top: 0;
 }
 
-/* Стилі для зображення рецепта */
 .recipe-detail img {
   width: 100%;
   max-width: 500px;
@@ -42,12 +36,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Стилі для секцій інформації */
 .recipe-detail section {
   margin-bottom: 30px;
 }
 
-/* Стилі для категорії та країни */
 .recipe-detail .category,
 .recipe-detail .area {
   display: inline-block;
@@ -60,7 +52,6 @@
   font-size: 0.9rem;
 }
 
-/* Стилі для списку інгредієнтів */
 .recipe-detail ul {
   list-style-type: none;
   padding: 0;
@@ -77,14 +68,12 @@
   border-left: 3px solid #3498db;
 }
 
-/* Стилі для інструкцій */
 .recipe-detail p {
   line-height: 1.6;
   color: #333;
   white-space: pre-line;
 }
 
-/* Стилі для відео */
 .recipe-detail iframe {
   width: 100%;
   max-width: 800px;
@@ -95,7 +84,6 @@
   border: none;
 }
 
-/* Стилі для посилань */
 .recipe-detail a {
   color: #3498db;
   text-decoration: none;
@@ -107,7 +95,6 @@
   text-decoration: underline;
 }
 
-/* Стилі для кнопки повернення */
 .back-button {
   padding: 10px 15px;
   background-color: #3498db;
@@ -125,7 +112,6 @@
   background-color: #2980b9;
 }
 
-/* Responsive adjustments */
 @media (min-width: 768px) {
   .recipe-detail .recipe-header {
     display: flex;
@@ -142,7 +128,6 @@
   }
 }
 
-/* Стилі для повідомлень про завантаження та помилки */
 .recipe-page p {
   text-align: center;
   padding: 20px;
@@ -153,7 +138,6 @@
   max-width: 500px;
 }
 
-/* Стилі для тегів, якщо вони є */
 .recipe-detail .tags {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -169,7 +153,6 @@
   font-size: 0.8rem;
 }
 
-/* Стилі для розділів рецепту */
 .ingredients-section,
 .instructions-section,
 .video-section {

@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# Meal Recipes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A recipe application built with React and TypeScript that uses [TheMealDB API](https://www.themealdb.com/api.php?ref=apilist.fun) to fetch and display meal recipes. This project demonstrates various features such as recipe listing, detailed recipe view, category filtering, pagination, debounced search, and a selection (or “shopping cart”) mechanism to combine ingredients from multiple recipes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Display Recipes:**  
+  Show all available recipes in a card format including a photo, title, category, and origin.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Single Recipe Detail:**  
+  View detailed information for a specific recipe including ingredients, instructions, and additional data provided by the API.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Category Filtering:**  
+  Filter recipes by category on the front-end. The filtering is performed without additional API calls.
+
+- **Pagination:**  
+  Implement front-end pagination with the following behavior:
+  - Navigation arrows reset the current page to `1`.
+  - If the total number of pages is more than 10, display pages 1 to 7, then an ellipsis (`…`), followed by the last page.
+- **Debounced Search:**  
+  Implement search functionality with debounce to minimize unnecessary API calls.
+
+- **Recipe Selection & Ingredient Aggregation:**  
+  Allow users to select multiple recipes. Display selected recipe cards along with a combined list of ingredients required to prepare all selected recipes and their corresponding instructions.
+
+- **API-based Search:**  
+  The search functionality is implemented through API calls, while category filtering and pagination are handled on the front-end.
+
+---
+
+## Technologies Used
+
+- **React**: For building the user interface.
+- **TypeScript**: For static type checking and improved developer experience.
+- **Tanstack Query (React Query)**: For data fetching, caching, and state management, eliminating the need for a separate state manager.
+- **Axios**
+
+---
+
+## Application Structure
+
+The application consists of three main pages:
+
+1. **All Recipes Page:**  
+   Displays a list of recipes in card format (photo, title, category, origin).
+
+2. **Single Recipe Page:**  
+   Displays all details of a selected recipe fetched from the API.
+
+3. **Selected Recipes Page:**  
+   Acts like a shopping cart for recipes:
+   - Shows cards for all selected recipes.
+   - Displays a combined list of ingredients required for all selected recipes.
+   - Provides consolidated preparation instructions.
+
+---
+
+## Data Management & API Integration
+
+- **Data Fetching:**  
+  All data fetching is handled using Tanstack Query. This includes both the initial recipe data and the API-based search functionality.
+- **Caching:**  
+  Instead of a traditional state manager, cached data from Tanstack Query is used to manage application state across different pages.
+
+- **TheMealDB API:**  
+  Utilized as the primary data source for recipes and related information.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or above)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/yourusername/meal-recipes-app.git
+cd meals_app
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+or use [Demo Link](https://github.com/WatarJoy/Meals_App)

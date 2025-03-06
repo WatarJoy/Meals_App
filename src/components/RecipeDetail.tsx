@@ -6,7 +6,6 @@ interface RecipeDetailProps {
 }
 
 const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe }) => {
-  // Отримання списку інгредієнтів (ключі, що починаються на "strIngredient" і мають значення)
   const ingredients = Object.keys(recipe)
     .filter((key) => key.startsWith("strIngredient") && recipe[key])
     .map((key) => recipe[key]);

@@ -6,6 +6,11 @@ interface CategoryFilterProps {
   onSelectCategory: (category: string) => void;
 }
 
+interface Category {
+  idCategory: string;
+  strCategory: string;
+}
+
 const CategoryFilter: React.FC<CategoryFilterProps> = ({
   onSelectCategory,
 }) => {
@@ -19,13 +24,13 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
   });
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Помилка завантаження категорій</p>;
+  if (error) return <p>Loading error</p>;
 
   return (
     <div className="category-filter">
       <select onChange={(e) => onSelectCategory(e.target.value)}>
         <option value="">All categories</option>
-        {categories.map((cat: any) => (
+        {categories.map((cat: Category) => (
           <option key={cat.idCategory} value={cat.strCategory}>
             {cat.strCategory}
           </option>

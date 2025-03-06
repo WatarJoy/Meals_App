@@ -6,12 +6,14 @@ interface RecipeCardProps {
   recipe: Recipe;
   onSelect?: (recipe: Recipe) => void;
   fallbackCategory?: string;
+  fallbackArea?: string;
 }
 
 const RecipeCard: React.FC<RecipeCardProps> = ({
   recipe,
   onSelect,
   fallbackCategory,
+  fallbackArea,
 }) => {
   return (
     <div className="recipe-card">
@@ -20,7 +22,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
       <p>
         Categorie: {recipe.strCategory ? recipe.strCategory : fallbackCategory}
       </p>
-      <p>Country: {recipe.strArea}</p>
+      <p>Country: {recipe.strArea ? recipe.strArea : fallbackArea}</p>
       <Link to={`/recipes/${recipe.idMeal}`}>See recipe</Link>
       {onSelect && (
         <button onClick={() => onSelect(recipe)}>Choose recipe</button>

@@ -19,7 +19,7 @@ const RecipePage: React.FC = () => {
   });
 
   if (isLoading) return <p>Loading...</p>;
-  if (error || !recipe) return <p>Помилка завантаження рецепту</p>;
+  if (error || !recipe) return <p>Loading error</p>;
 
   return (
     <div className="recipe-page">

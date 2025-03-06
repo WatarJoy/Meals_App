@@ -1,0 +1,37 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.selected-recipes-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.selected-recipes-button:hover {
+  background-color: #45a049;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 8px;
+}

@@ -6,6 +6,5 @@ export interface Recipe {
   strInstructions: string;
   strMealThumb: string;
   strYoutube?: string;
-  // Додаткові поля (інгредієнти, виміри, тощо)
-  [key: string]: any;
+  [key: string]: unknown;
 }
