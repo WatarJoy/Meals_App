@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./Snackbar.css";
+import "./snackbar.css";
 
 interface SnackbarProps {
   message: string;
