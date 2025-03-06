@@ -6,5 +6,5 @@ export interface Recipe {
   strInstructions: string;
   strMealThumb: string;
   strYoutube?: string;
-  [key: string]: unknown;
+  [key: string]: any;
 }
