@@ -15,6 +15,13 @@ import { Link } from "react-router-dom";
 import "./AllRecipesPage.css";
 import Snackbar from "../../components/snackbar/snackbar";
 
+type SnackbarType = "info" | "error" | "success";
+interface SnackbarState {
+  open: boolean;
+  message: string;
+  type: SnackbarType;
+}
+
 const AllRecipesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -22,7 +29,7 @@ const AllRecipesPage: React.FC = () => {
   const recipesPerPage = 10;
   const [fullRecipes, setFullRecipes] = useState<Recipe[]>([]);
   const [selectedCount, setSelectedCount] = useState(0);
-  const [snackbar, setSnackbar] = useState({
+  const [snackbar, setSnackbar] = useState<SnackbarState>({
     open: false,
     message: "",
     type: "error",
